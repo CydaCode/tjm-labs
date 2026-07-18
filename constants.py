@@ -1,10 +1,11 @@
 """Static configuration: API endpoint, mock caller data, intent keywords, and display settings."""
 
-PHARMACY_API_URL = "https://67e14fb758cc6bf785254550.mockapi.io/pharmacies"
+PHARMACY_API_URL = "https://67e14fb758cc6bf785254550.mockapi.io/pharmacies" #This api is supposed to be in the .env file, but for now it is hardcoded here for testing purposes.
 
 # Simulated inbound caller. Change to a number not present in the API
-# (e.g. "+1-555-000-0000") to exercise the "unrecognized caller" flow. +1-555-123-4567
-MOCK_CALLER_PHONE = "+1-555-000-0000"
+
+#MOCK_CALLER_PHONE = "+1-555-000-0000" # unrecognized caller
+MOCK_CALLER_PHONE = "+1-555-123-4567" # recognized caller
 
 REQUEST_TIMEOUT_SECONDS = 5
 
@@ -20,11 +21,7 @@ APP_HEADER = (
 # Checked in order; the first intent whose keywords appear in the message wins.
 INTENT_KEYWORDS = {
     "exit": ["exit", "quit", "bye", "goodbye", "hang up", "that's all", "nothing else"],
-    # Caller asking about their OWN data already on file - must be checked
-    # before "email"/"callback" so e.g. "tell me my email" isn't mistaken
-    # for a request to send/schedule something. Unambiguous stand-alone phrases;
-    # see ACCOUNT_SELF_REFERENCE_WORDS/ACCOUNT_FIELD_WORDS below for the more
-    # general "how many prescriptions do I have" style of phrasing.
+   
     "account_info": [
         "my profile", "my account", "my information", "my details", "my record",
         "my pharmacy name", "check my record", "what's my", "what is my",
