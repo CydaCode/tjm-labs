@@ -9,6 +9,13 @@ pip install -r requirements.txt
 python main.py
 ```
 
+The simulated caller's phone number is set in `constants.py` via `MOCK_CALLER_PHONE`. Swap between the two lines to try either path:
+
+```python
+MOCK_CALLER_PHONE = "+1-555-123-4567"  # known caller - found via the Pharmacy Identification API
+MOCK_CALLER_PHONE = "+1-555-000-0000"  # unknown caller - triggers onboarding (name + Rx volume)
+```
+
 Type naturally at the `You:` prompt (e.g. `I want pricing`, `can I schedule a demo?`, `exit`). No menus, no numbered options.
 
 ## What this is

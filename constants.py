@@ -20,7 +20,10 @@ APP_HEADER = (
 
 # Checked in order; the first intent whose keywords appear in the message wins.
 INTENT_KEYWORDS = {
-    "exit": ["exit", "quit", "bye", "goodbye", "hang up", "that's all", "nothing else"],
+    "exit": [
+        "exit", "quit", "bye", "goodbye", "hang up", "that's all", "nothing else", "nothing",
+        "end the call", "end this call", "end call",
+    ],
    
     "account_info": [
         "my profile", "my account", "my information", "my details", "my record",
@@ -39,7 +42,10 @@ INTENT_KEYWORDS = {
     "talk_to_human": [
         "talk to someone", "speak to someone", "talk to somebody", "speak with someone",
         "talk to a person", "speak to a person", "talk to a rep", "speak to a rep",
-        "talk to a human", "speak to a human",
+        "talk to a human", "speak to a human", "who can i talk to", "who do i talk to",
+        "can i talk to", "can i speak to", "talk to anybody", "speak to anybody",
+        "call anybody", "talk to anyone", "speak to anyone", "speak with anyone",
+        "anyone from your team", "anybody from your team", "call someone",
     ],
     "email": [
         "email", "send me an email", "send an email", "mail me the",
@@ -73,7 +79,7 @@ AFFIRMATIVE_KEYWORDS = [
 # or when asked if the caller needs anything else.
 NEGATIVE_KEYWORDS = [
     "no", "nope", "no thanks", "not now", "nothing else", "that's all",
-    "i'm good", "im good", "all good", "we're good",
+    "i'm good", "im good", "all good", "we're good", "Nothing",
 ]
 
 RX_VOLUME_TIERS = (
