@@ -58,3 +58,20 @@ It's deliberately never written to for callers the API *does* recognize - the AP
 - Intent detection is deterministic keyword matching, not an LLM - predictable and easy to test, at the cost of natural-language flexibility. Swapping in an LLM later would only mean replacing `conversation.py`'s intent detection; the rest of the flow (identify -> converse -> follow up) stays the same.
 - Email and callback are mocked - they print a confirmation instead of calling a real service.
 - The Pharmacy Identification API is treated as the source of truth; the local caller log only covers what the API doesn't.
+
+
+-------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
+## If I had 3 more hours, what would I do?
+-------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
+
+With an additional three hours, I would focus on improving the realism, robustness, and extensibility of the solution rather than adding unrelated features.
+
+First, I would replace the rule-based intent detection with an LLM-powered conversation engine. This would enable the agent to better understand natural language, handle a wider variety of user requests, maintain richer conversational context, and generate more natural responses while continuing to use the same pharmacy lookup and follow-up workflows.
+
+Second, I would replace the mocked email and callback services with real integrations, allowing the agent to send actual follow-up emails and create calendar events or CRM tasks.
+
+Third, I would improve reliability by adding automated unit tests, stronger input validation, structured logging, and more comprehensive error handling for API failures and unexpected user input.
+
+Finally, I would enhance the user experience by improving the terminal interface with richer formatting, conversation history, and clearer status updates, making the application feel closer to a production-ready support tool while preserving its simplicity.
