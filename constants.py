@@ -4,8 +4,8 @@ PHARMACY_API_URL = "https://67e14fb758cc6bf785254550.mockapi.io/pharmacies" #Thi
 
 # Simulated inbound caller. Change to a number not present in the API
 
-#MOCK_CALLER_PHONE = "+1-555-000-0000" # unrecognized caller
-MOCK_CALLER_PHONE = "+1-555-123-4567" # recognized caller
+MOCK_CALLER_PHONE = "+1-555-000-0000" # unrecognized caller
+#MOCK_CALLER_PHONE = "+1-555-123-4567" # recognized caller
 
 REQUEST_TIMEOUT_SECONDS = 5
 
