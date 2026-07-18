@@ -32,7 +32,7 @@ def unknown_caller_greeting() -> str:
 def returning_caller_greeting(pharmacy: Pharmacy) -> str:
     """Greeting for a caller not in the API, but recognized from a previous call."""
     return (
-        f"Welcome back, {pharmacy.name}! I have you on file from a previous call - "
+        f"Welcome back, {pharmacy.name}! I have you on file from a previous call,  "
         f"processing around {pharmacy.rx_volume} prescriptions a month. "
         "How can I help you today?"
     )
@@ -40,12 +40,12 @@ def returning_caller_greeting(pharmacy: Pharmacy) -> str:
 
 def missing_email_prompt() -> str:
     """Prompt used when an email is needed (to send or to answer) but none is on file."""
-    return "I don't have an email on file for you yet - what's the best email to reach you at?"
+    return "I don't have an email on file for you yet. What's the best email to reach you at?"
 
 
 def missing_location_prompt() -> str:
     """Prompt used when a caller asks about their location but none is on file."""
-    return "I don't have a location on file for you yet - what city and state are you calling from?"
+    return "I don't have a location on file for you yet. What city and state are you calling from?"
 
 
 def pricing_response(pharmacy: Pharmacy) -> str:
@@ -81,11 +81,11 @@ def thanks_response() -> str:
 
 
 def closing_response() -> str:
-    return "No problem - thanks for calling TJM Labs. Have a great day!"
+    return "No problem. thanks for calling TJM Labs. Have a great day!"
 
 
 def talk_to_human_response() -> str:
-    return "I can have someone from our team call you directly - would you like me to schedule that callback?"
+    return "I can have someone from our team call you directly. Would you like me to schedule that callback?"
 
 
 def _full_account_summary(pharmacy: Pharmacy) -> str:
@@ -143,8 +143,8 @@ def unsupported_response() -> str:
     """Safe fallback for requests outside the agent's supported domain."""
     return (
         "I'd love to help, but I want to make sure you get the right information. "
-        "I can have a member of our team follow up by email or schedule a callback - "
-        "which would you prefer?"
+        "I can have a member of our team follow up by email or schedule a callback. "
+        "Which would you prefer?"
     )
 
 
